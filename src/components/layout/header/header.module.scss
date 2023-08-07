@@ -1,0 +1,38 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header ul {
+	display: flex;
+	align-items: center;
+	gap: 4rem;
+}
+
+.header a:link,
+.header a:visited {
+	color: var(--color-light--2);
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.header a:global(.active) {
+	color: var(--color-brand--2);
+}
+
+a.ctaLink:link,
+a.ctaLink:visited {
+	background-color: var(--color-brand--2);
+	color: var(--color-dark--0);
+	padding: 0.8rem 2rem;
+	border-radius: 7px;
+}
+
+@media (max-width: 768px) {
+	.header {
+		margin-top: 2rem;
+		flex-direction: column;
+		gap: 3rem;
+	}
+}

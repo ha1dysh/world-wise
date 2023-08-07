@@ -1,10 +1,12 @@
 import Link from "next/link";
 import styles from "./page.module.scss";
+import Header from "@/components/layout/header/header";
 
 export default function Home() {
 	return (
-		<div className={styles.homepage}>
-			<main>
+		<div className={styles.container}>
+			<Header />
+			<main className={styles.main}>
 				<h1>
 					You travel the world.
 					<br />
@@ -15,7 +17,9 @@ export default function Home() {
 					can think of. Never forget your wonderful experiences, and
 					show your friends how you have wandered the world.
 				</h2>
-				<Link href='/main/cities'>Start tracking now</Link>
+				<Link className={styles.start} href='/main/cities'>
+					Start tracking now
+				</Link>
 			</main>
 		</div>
 	);
