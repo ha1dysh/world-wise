@@ -4,10 +4,10 @@ import styles from "./page.module.scss";
 
 export default function Pricing() {
 	return (
-		<div className={styles.product}>
+		<div className={styles.container}>
 			<Header />
 
-			<main>
+			<main className={styles.main}>
 				<div>
 					<h2>
 						Simple pricing.

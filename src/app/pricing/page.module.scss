@@ -1,11 +1,11 @@
-.product {
+.container {
 	margin: 2.5rem;
 	padding: 2.5rem 5rem;
 	background-color: var(--color-dark--1);
 	min-height: calc(100vh - 5rem);
 }
 
-.product main {
+.main {
 	width: clamp(80rem, 80%, 90rem);
 	margin: 6rem auto;
 	display: grid;
@@ -14,21 +14,46 @@
 	align-items: center;
 }
 
-.product img {
-	width: 100%;
-}
-
-.product h2 {
+.main h2 {
 	font-size: 4rem;
 	line-height: 1.2;
 	margin-bottom: 3rem;
 }
 
-.product p {
+.main p {
 	font-size: 1.6rem;
 	margin-bottom: 2rem;
 }
 
-.product main a {
-	margin-top: 2rem;
+.main img {
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.container {
+		height: calc(100dvh - 2rem);
+		margin: 1rem;
+		padding: 1rem;
+	}
+
+	.main {
+		display: flex;
+		flex-direction: column;
+		width: auto;
+		height: auto;
+		margin: 0;
+		gap: 0;
+		justify-content: space-between;
+		text-align: center;
+	}
+
+	.main h2 {
+		font-size: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	.main p {
+		font-size: 1.6rem;
+		margin-bottom: 4rem;
+	}
 }
