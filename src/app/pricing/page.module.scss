@@ -33,7 +33,7 @@
 	.container {
 		height: calc(100dvh - 2rem);
 		margin: 1rem;
-		padding: 1rem;
+		padding: 2rem;
 	}
 
 	.main {
@@ -53,7 +53,8 @@
 	}
 
 	.main p {
-		font-size: 1.6rem;
 		margin-bottom: 4rem;
+		font-size: 1.6rem;
+		text-align: justify;
 	}
 }
