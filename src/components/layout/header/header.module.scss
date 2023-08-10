@@ -1,17 +1,19 @@
 .header {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
+	gap: 3rem;
 }
 
 .header ul {
 	display: flex;
 	align-items: center;
-	gap: 4rem;
+	gap: 1.5rem;
 }
 
 .header a:link,
 .header a:visited {
+	padding: 0.5rem 1.5rem;
 	color: var(--color-light--2);
 	font-size: 1.5rem;
 	font-weight: 600;
@@ -25,14 +27,13 @@ a.ctaLink:link,
 a.ctaLink:visited {
 	background-color: var(--color-brand--2);
 	color: var(--color-dark--0);
-	padding: 0.8rem 2rem;
+	padding: 0.5rem 1.5rem;
 	border-radius: 7px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 	.header {
-		margin: 4rem 0;
-		flex-direction: column;
-		gap: 3rem;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 }
