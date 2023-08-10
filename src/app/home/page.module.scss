@@ -52,8 +52,9 @@
 	.container {
 		height: calc(100dvh - 2rem);
 		margin: 1rem;
-		padding: 1rem;
+		padding: 2rem;
 	}
+
 	.main {
 		height: auto;
 	}
@@ -63,8 +64,9 @@
 	}
 
 	.main h2 {
-		font-size: 2rem;
-		color: var(--color-light--1);
 		margin-bottom: 2.5rem;
+		font-size: 2rem;
+		text-align: justify;
+		color: var(--color-light--1);
 	}
 }
