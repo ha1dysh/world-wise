@@ -6,7 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"server": "json-server ./data/cities.json --port 3003 --delay 1000"
 	},
 	"dependencies": {
 		"@types/node": "20.4.8",
