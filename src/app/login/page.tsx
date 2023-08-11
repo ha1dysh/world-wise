@@ -5,11 +5,11 @@ import Header from "@/components/layout/header/header";
 import Button from "@/components/shared/button/button";
 
 export default function Login() {
-	const [email, setEmail] = useState("Gennadiy@gmail.com");
-	const [password, setPassword] = useState("qwerty");
+	const [email, setEmail] = useState("example@gmail.com");
+	const [password, setPassword] = useState("example");
 
 	return (
-		<main className={styles.container}>
+		<div className={styles.container}>
 			<Header />
 			<form className={styles.form}>
 				<label className={styles.row} htmlFor='email'>
@@ -34,6 +34,6 @@ export default function Login() {
 
 				<Button btnType='primary'>Login</Button>
 			</form>
-		</main>
+		</div>
 	);
 }
