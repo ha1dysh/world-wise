@@ -5,15 +5,19 @@
 	gap: 3rem;
 }
 
+.header nav {
+	min-width: 30rem;
+}
+
 .header ul {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	gap: 1.5rem;
 }
 
 .header a:link,
 .header a:visited {
-	padding: 0.5rem 1.5rem;
 	color: var(--color-light--2);
 	font-size: 1.5rem;
 	font-weight: 600;
