@@ -1,12 +1,17 @@
-"use client";
-import { ReactNode, useState } from "react";
+import type { Metadata } from "next";
 import Sidebar from "@/components/layout/sidebar/sidebar";
 import styles from "./layout.module.scss";
-import { ICity } from "@/api/types";
 
-export default function MainLayout({ children }: { children: ReactNode }) {
-	const [currentCity, setCurrentCity] = useState<ICity | null>(null);
+export const metadata: Metadata = {
+	title: "World Wise | Map",
+	description: "World Wise Application",
+};
 
+export default function MainLayout({
+	children,
+}: {
+	children: React.ReactNode;
+}) {
 	return (
 		<div className={styles.container}>
 			<Sidebar>{children}</Sidebar>

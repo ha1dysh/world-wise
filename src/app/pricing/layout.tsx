@@ -1,12 +1,11 @@
-import "./styles/main.scss";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "World Wise | Home",
+	title: "World Wise | Price",
 	description: "World Wise Application",
 };
 
-export default function RootLayout({
+export default function PriceLayout({
 	children,
 }: {
 	children: React.ReactNode;
