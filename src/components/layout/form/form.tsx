@@ -2,9 +2,9 @@
 // "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=0&longitude=0"
 import { FormEvent, useState } from "react";
 
-import styles from "./Form.module.scss";
+import styles from "./form.module.scss";
 import Button from "@/components/shared/button/button";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 // export function convertToEmoji(countryCode) {
 // 	const codePoints = countryCode
