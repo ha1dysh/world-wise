@@ -1,4 +1,4 @@
-import { ICity } from "@/api/types";
+import { ICity } from "@/localStorage/types";
 import styles from "./cityList.module.scss";
 import CityItem from "./cityItem";
 
@@ -10,7 +10,7 @@ export default function CityList({ cities }: { cities: ICity[] }) {
 	return (
 		<ul className={styles.cityList}>
 			{cities.map((city) => (
-				<CityItem city={city} key={city.id} />
+				<CityItem city={city} key={Math.random()} />
 			))}
 		</ul>
 	);

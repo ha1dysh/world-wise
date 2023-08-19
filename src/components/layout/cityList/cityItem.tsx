@@ -1,5 +1,5 @@
 import styles from "./cityItem.module.scss";
-import { ICity } from "@/api/types";
+import { ICity } from "@/localStorage/types";
 import Link from "next/link";
 
 export default function CityItem({ city }: { city: ICity }) {
