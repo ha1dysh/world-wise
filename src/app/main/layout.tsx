@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import Sidebar from "@/components/layout/sidebar/sidebar";
 import styles from "./layout.module.scss";
 import { useEffect, useState } from "react";
@@ -10,11 +9,6 @@ const Map = dynamic(() => import("@/components/layout/map/map"), {
 	loading: () => <p>loading...</p>,
 	ssr: false,
 });
-
-export const metadata: Metadata = {
-	title: "World Wise | Map",
-	description: "World Wise Application",
-};
 
 export default function MainLayout({
 	children,
