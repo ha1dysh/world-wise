@@ -17,8 +17,7 @@ export default function CityItem({ city }: { city: ICity }) {
 				// 	id === currentCity.id ? styles["cityItem--active"] : ""
 				// }`}
 				className={`${styles.cityItem} `}
-				// href={`${id}?lat=${position.lat}&lng=${position.lng}`}
-				href={""}
+				href={`/main/cities/${id}?lat=${position.lat}&lng=${position.lng}`}
 			>
 				<span className={styles.emoji}>{emoji}</span>
 				<h3 className={styles.name}>{cityName}</h3>

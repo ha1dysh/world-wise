@@ -69,7 +69,7 @@ export default function Form() {
 					btnType='back'
 					onClick={(e: FormEvent) => {
 						e.preventDefault();
-						router.back();
+						router.push("/main/cities/");
 					}}
 				>
 					&larr; Back
