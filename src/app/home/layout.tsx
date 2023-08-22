@@ -1,5 +1,6 @@
-import "./styles/main.scss";
 import type { Metadata } from "next";
+import styles from './page.module.scss';
+import Header from "@/components/layout/header/header";
 
 export const metadata: Metadata = {
 	title: "World Wise",
@@ -12,8 +13,9 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en'>
-			<body>{children}</body>
-		</html>
+		<div className={styles.container}>
+			<Header />
+			{children}
+		</div>
 	);
 }

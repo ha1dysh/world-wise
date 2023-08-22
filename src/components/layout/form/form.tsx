@@ -5,6 +5,8 @@ import { FormEvent, useState } from "react";
 import styles from "./form.module.scss";
 import Button from "@/components/shared/button/button";
 import { useRouter } from "next/navigation";
+import { useCities } from '@/localStorage/cityStorage';
+import { ICity } from "@/localStorage/types";
 
 // export function convertToEmoji(countryCode) {
 // 	const codePoints = countryCode
@@ -15,6 +17,7 @@ import { useRouter } from "next/navigation";
 // }
 
 export default function Form() {
+	const [cities, setCities] = useCities();
 	const [cityName, setCityName] = useState("");
 	const [date, setDate] = useState(new Date());
 	const [notes, setNotes] = useState("");
@@ -22,13 +25,20 @@ export default function Form() {
 
 	function handleSubmit(e: FormEvent<HTMLFormElement>) {
 		e.preventDefault();
-		const citiesJSON = localStorage.getItem("cities");
-		const cities = citiesJSON ? JSON.parse(citiesJSON) : [];
+		const city = {
+			cityName,
+			notes,
+			date,
+			country: '',
+			emoji: '',
+			id: 1,
+			position: { lat: 1, lng: 1 }
+		};
 
-		cities.push({ cityName, date, notes });
+		setCities((state: ICity[]) =>
+			[...state, city]);
 
-		localStorage.setItem("cities", JSON.stringify(cities));
-		router.back();
+		router.push('/main/cities');
 	}
 
 	return (

@@ -20,14 +20,14 @@ export default function Header() {
 							<li key={link}>
 								<Link
 									className={isActive ? "active" : ""}
-									href={link.toLowerCase()}
+									href={`/home/${link.toLowerCase()}`}
 								>
 									{link}
 								</Link>
 							</li>
 						);
 					})}
-					<Link className={styles.ctaLink} href='/login'>
+					<Link className={styles.ctaLink} href='/home/login'>
 						LOGIN
 					</Link>
 				</ul>

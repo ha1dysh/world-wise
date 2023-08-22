@@ -1,19 +1,9 @@
 "use client";
-import { ICity } from "@/localStorage/types";
 import CityList from "@/components/layout/cityList/cityList";
-import { useEffect, useState } from "react";
+import { useCities } from '@/localStorage/cityStorage';
 
 export default function Cities() {
-	const [cities, setCities] = useState<ICity[] | []>([]);
-
-	useEffect(() => {
-		const items = localStorage.getItem("cities");
-		if (!items) {
-			return setCities([]);
-		}
-		const parsedItems = JSON.parse(items);
-		setCities(parsedItems);
-	}, []);
+	const [cities] = useCities();
 
 	return <CityList cities={cities} />;
 }

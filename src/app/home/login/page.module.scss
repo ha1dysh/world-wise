@@ -1,16 +1,11 @@
-@import "../styles/mixin.scss";
-
-.container {
-	@include container;
-	background-color: var(--color-dark--1);
-}
-
 .form {
-	@include flex;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 	margin: 0 4rem;
 	border-radius: 8px;
 	justify-content: center;
-	gap: 3rem;
+	gap: 2rem;
 }
 
 .form label {
@@ -18,7 +13,16 @@
 	flex-direction: column;
 }
 
-@include on768 {
+.form button {
+	color: #000;
+	margin-top: 2rem;
+}
+
+.form button a{
+	color: #000;
+}
+
+@media (min-width: 768px) {
 	.form {
 		align-items: center;
 	}

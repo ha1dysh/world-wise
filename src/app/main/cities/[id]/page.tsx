@@ -2,19 +2,18 @@
 import { ICity } from "@/localStorage/types";
 import styles from "./page.module.scss";
 import { useEffect, useState } from "react";
+import { useCities } from "@/localStorage/cityStorage";
 
 export default function City({ params }: { params: { id: string } }) {
+	const [cities] = useCities();
 	const [city, setCity] = useState<ICity | {}>({});
 
 	useEffect(() => {
-		const items = localStorage.getItem("cities");
-		if (!items) {
-			return setCity([]);
+		const city = cities.find((e: ICity) => e.id === Number(params.id));
+		if (city) {
+			setCity(city);
 		}
-		const parsedItems = JSON.parse(items);
-		const city = parsedItems.find((e: ICity) => e.id === Number(params.id));
-		setCity(city);
-	}, [params.id]);
+	}, [cities, params.id]);
 
 	const { cityName, emoji, date, notes } = city as ICity;
 

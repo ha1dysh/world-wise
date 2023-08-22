@@ -1,12 +1,9 @@
 import Link from "next/link";
 import styles from "./page.module.scss";
-import Header from "@/components/layout/header/header";
 
 export default function Home() {
 	return (
-		<div className={styles.container}>
-			<Header />
-			<main className={styles.main}>
+			<main className={styles.homeMain}>
 				<h1>
 					You travel the world.
 					<br />
@@ -21,6 +18,5 @@ export default function Home() {
 					Start tracking now
 				</Link>
 			</main>
-		</div>
 	);
 }
